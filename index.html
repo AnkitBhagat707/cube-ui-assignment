@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GTG Perfumes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body> 
+
+<!--== HEADER ==-->
+  
+<header class="site-header">
+  <div class="header-wrapper">
+    <div class="logo">GTG</div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Fragrances</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <a href="#" class="shop-btn">Shop Now</a>
+    </div>
+  </div>
+</header>
+
+<!--== HERO = -->
+<section class="hero-section">
+  <div class="hero-wrapper">
+
+    <div class="hero-content">
+      <span class="hero-badge">Awarded the best perfume in the world</span>
+      <h1>Live your best life.</h1>
+
+      <div class="hero-stats">
+        <div><strong>10x</strong><span>power</span></div>
+        <div><strong>9</strong><span>ingredients</span></div>
+        <div><strong>20K+</strong><span>happy customers</span></div>
+      </div>
+
+      <a href="#" class="hero-btn">Shop Now</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/images/hero.png" loading="lazy" alt="Hero Perfume">
+    </div>
+
+  </div>
+</section>
+
+<!-- == PRODUCT == -->
+
+<section class="product-section">
+  <div class="product-wrapper">
+
+    <!-- LEFT GALLERY -->
+    <div class="gallery">
+      <div class="slider">
+        <button class="arrow left" onclick="prevImage()">‹</button>
+        <img id="mainImage" src="assets/images/product-main.png" loading="lazy" class="main-image">
+        <button class="arrow right" onclick="nextImage()">›</button>
+      </div>
+
+      <div class="dots">
+        <span class="dot active" onclick="setImage(0)"></span>
+        <span class="dot" onclick="setImage(1)"></span>
+        <span class="dot" onclick="setImage(2)"></span>
+      </div>
+
+      <div class="thumbs">
+        <img src="assets/images/product-main.png" loading="lazy" onclick="setImage(0)">
+        <img src="assets/images/collection.png" loading="lazy" onclick="setImage(1)">
+        <img src="assets/images/hero.png" loading="lazy" onclick="setImage(2)">
+      </div>
+    </div>
+
+    
+    <div class="product-details">
+      <h2>GTG Perfumes</h2>
+
+    
+      <div class="subscription-box">
+
+        
+        <div class="subscription-card active" onclick="selectPlan('single')">
+          <div class="sub-header">
+            <input type="radio" name="plan" checked>
+            <span>Single Subscription</span>
+            <strong>$99.99</strong>
+          </div>
+
+          <div class="sub-body" id="singleBox">
+            <p>1 bottle every month</p>
+            <p>Free sampler</p>
+            <p>50% OFF shipping</p>
+          </div>
+        </div>
+
+      
+        <div class="subscription-card" onclick="selectPlan('double')">
+          <div class="sub-header">
+            <input type="radio" name="plan">
+            <span>Double Subscription</span>
+            <strong>$169.99</strong>
+          </div>
+
+          <div class="sub-body hidden" id="doubleBox">
+            <p>2 bottles every month</p>
+            <p>Free sampler</p>
+            <p>50% OFF shipping</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FRAGRANCE -->
+      <div class="radio-group">
+        <h4>Choose Fragrance</h4>
+        <label><input type="radio" name="fragrance" value="original" checked><span>Original</span></label>
+        <label><input type="radio" name="fragrance" value="lily"> Lily</label>
+        <label><input type="radio" name="fragrance" value="rose"> Rose</label>
+      </div>
+
+      <!-- PURCHASE TYPE -->
+      <div class="radio-group">
+        <h4>Purchase Type</h4>
+        <label><input type="radio" name="purchase" value="monthly" checked> Monthly</label>
+        <label><input type="radio" name="purchase" value="onetime"> One Time</label>
+        <label><input type="radio" name="purchase" value="trial"> Trial</label>
+      </div>
+
+      <a href="#" id="cartLink" class="cart-btn">Add to Cart</a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="collection-section">
+  <div class="collection-wrapper">
+    <div class="collection-text">
+      <h2>Our Collection</h2>
+      <p>Discover our curated line of signature perfumes.</p>
+    </div>
+
+    <div class="collection-image">
+      <img src="assets/images/collection.png" loading="lazy" alt="Collection">
+    </div>
+  </div>
+</section>
+
+<section class="stats-section" id="statsSection">
+  <div class="stats-wrapper">
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="84">0</span>%</h3>
+      <p>Customer Satisfaction</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="78">0</span>%</h3>
+      <p>Repeat Customers</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="89">0</span>%</h3>
+      <p>Quality Rating</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="90">0</span>%</h3>
+      <p>Trusted Users</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="table-section">
+  <h2>Why GTG is the #1 Choice</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>Features</th>
+        <th>GTG</th>
+        <th>Other Brands</th>
+      </tr>
+
+      <tr>
+        <td>Long Lasting</td>
+        <td>✔</td>
+        <td>✖</td>
+      </tr>
+
+      <tr>
+        <td>Skin Friendly</td>
+        <td>✔</td>
+        <td>✖</td>
+      </tr>
+
+      <tr>
+        <td>Premium Ingredients</td>
+        <td>✔</td>
+        <td>✖</td>
+      </tr>
+
+      <tr>
+        <td>Luxury Packaging</td>
+        <td>✔</td>
+        <td>✖</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+
+<!-- == FOOTER == -->
+<footer class="site-footer">
+  <img src="assets/images/footer.png" loading="lazy" class="footer-bg">
+  <p>© 2026 GTG Perfumes</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
